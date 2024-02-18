@@ -25,12 +25,14 @@ const searchWeather = async () => {
         <div >
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
       <div class="col">
-        <div class="card mb-4 rounded-3 shadow-sm bg-dark text-light">
+        <div class="card mb-4 rounded-3 shadow-sm bg-dark text-light"  >
           <div class=" py-3">
             <h1 class="my-0 fw-normal">City</h1>
           </div>
           <div class="card-body ">
             <h1 class="card-title pricing-card-title">${json.name}</h1>
+            <img src="http://openweathermap.org/img/wn//${json.weather[0].icon}@4x.png" class="w-10">
+
             <br/>
             <button type="button" class="w-100 btn btn-lg btn-light ">Country ${country}</button>
           </div>
@@ -42,7 +44,9 @@ const searchWeather = async () => {
             <h1 class="my-0 fw-normal">Temperature</h1>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">${temp}</h1>
+            <h1 class="card-title pricing-card-title">${temp} 'C</h1>
+            <img src="http://openweathermap.org/img/wn//${json.weather[0].icon}@4x.png" class="w-10">
+
             <br/>
             <button type="button" class="w-100 btn btn-lg btn-light">feels like ${feelslike}, Humidity: ${humidity}</button>
           </div>
@@ -55,6 +59,8 @@ const searchWeather = async () => {
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">${weather}</h1>
+            <img src="http://openweathermap.org/img/wn//${json.weather[0].icon}@4x.png" class="w-10">
+
             <br/>
             <button type="button" class="w-100 btn btn-lg btn-light">${weatherDescription}</button>
             <i class="${json.weather[0].icon}"> </i>
